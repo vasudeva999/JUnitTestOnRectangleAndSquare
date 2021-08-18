@@ -62,4 +62,13 @@ public class RectangleAndSquareTest {
         public void toCalculatedAreaOfSquareWhenSideIsNegative(){assertEquals(0, rectangleAndSquare.areaOfSquare(-5));}
     }
 
+    @Nested
+    public class PerimeterOfSquare {
+        @Test
+        public void toCalculatedPerimeterOfSquareWhenSideIsPositive(){assertEquals(20, rectangleAndSquare.perimeterOfSquare(5));}
+
+        @Test
+        public void toCalculatedPerimeterOfSquareWhenSideIsNegative(){assertEquals(0, rectangleAndSquare.perimeterOfSquare(-5));}
+    }
+
 }
