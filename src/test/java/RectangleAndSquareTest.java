@@ -2,31 +2,30 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class RectangleAndSquareTest {
-    private RectangleAndSquare rectangleAndSquare;
-
-    @BeforeEach
-    public void createObject(){rectangleAndSquare = new RectangleAndSquare();}
-
     @Nested
     public class AreaOfRectangle {
         @Test
         public void toCalculateAreaWhenLengthAndBreadthArePositive() {
-            assertEquals(25, rectangleAndSquare.areaOfRectangle(5, 5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5, 6);
+            assertEquals(30, rectangleAndSquare.areaOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculateAreaWhenLengthAndBreadthAreNegative() {
-            assertEquals(0, rectangleAndSquare.areaOfRectangle(-5, -5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5, -6);
+            assertEquals(0, rectangleAndSquare.areaOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculateAreaWhenLengthIsPositiveAndBreadthIsNegative() {
-            assertEquals(0, rectangleAndSquare.areaOfRectangle(5, -5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5, -6);
+            assertEquals(0, rectangleAndSquare.areaOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculateAreaWhenLengthIsNegativeAndBreadthIsPositive() {
-            assertEquals(0, rectangleAndSquare.areaOfRectangle(-5, 5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5, 6);
+            assertEquals(0, rectangleAndSquare.areaOfRectangleOrSquare());
         }
     }
 
@@ -34,41 +33,57 @@ public class RectangleAndSquareTest {
     public class PerimeterOfRectangle {
         @Test
         public void toCalculatePerimeterWhenLengthAndBreadthArePositive(){
-            assertEquals(20, rectangleAndSquare.perimeterOfRectangle(5, 5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5, 6);
+            assertEquals(22, rectangleAndSquare.perimeterOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculatePerimeterWhenLengthAndBreadthAreNegative(){
-            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(-5, -5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5, -6);
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculatePerimeterWhenLengthIsPositiveAndBreadthIsNegative(){
-            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(5, -5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5, -6);
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangleOrSquare());
         }
 
         @Test
         public void toCalculatePerimeterWhenLengthIsNegativeAndBreadthIsPositive(){
-            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(-5, 5));
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5, 6);
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangleOrSquare());
         }
     }
 
     @Nested
     public class AreaOfSquare {
         @Test
-        public void toCalculatedAreaOfSquareWhenSideIsPositive(){assertEquals(25, rectangleAndSquare.areaOfSquare(5));}
+        public void toCalculatedAreaOfSquareWhenSideIsPositive(){
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5);
+            assertEquals(25, rectangleAndSquare.areaOfRectangleOrSquare());
+        }
 
         @Test
-        public void toCalculatedAreaOfSquareWhenSideIsNegative(){assertEquals(0, rectangleAndSquare.areaOfSquare(-5));}
+        public void toCalculatedAreaOfSquareWhenSideIsNegative(){
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5);
+            assertEquals(0, rectangleAndSquare.areaOfRectangleOrSquare());
+        }
     }
 
     @Nested
     public class PerimeterOfSquare {
         @Test
-        public void toCalculatedPerimeterOfSquareWhenSideIsPositive(){assertEquals(20, rectangleAndSquare.perimeterOfSquare(5));}
+        public void toCalculatedPerimeterOfSquareWhenSideIsPositive(){
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(5);
+            assertEquals(20, rectangleAndSquare.perimeterOfRectangleOrSquare());
+        }
 
         @Test
-        public void toCalculatedPerimeterOfSquareWhenSideIsNegative(){assertEquals(0, rectangleAndSquare.perimeterOfSquare(-5));}
+        public void toCalculatedPerimeterOfSquareWhenSideIsNegative(){
+            RectangleAndSquare rectangleAndSquare = new RectangleAndSquare(-5);
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangleOrSquare());
+        }
     }
 
 }
