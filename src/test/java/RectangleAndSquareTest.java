@@ -11,22 +11,45 @@ public class RectangleAndSquareTest {
     public class AreaOfRectangle {
         @Test
         public void toCalculateAreaWhenLengthAndBreadthArePositive() {
-            assertEquals(25, rectangleAndSquare.AreaOfRectangle(5, 5));
+            assertEquals(25, rectangleAndSquare.areaOfRectangle(5, 5));
         }
 
         @Test
         public void toCalculateAreaWhenLengthAndBreadthAreNegative() {
-            assertEquals(0, rectangleAndSquare.AreaOfRectangle(-5, -5));
+            assertEquals(0, rectangleAndSquare.areaOfRectangle(-5, -5));
         }
 
         @Test
         public void toCalculateAreaWhenLengthIsPositiveAndBreadthIsNegative() {
-            assertEquals(0, rectangleAndSquare.AreaOfRectangle(5, -5));
+            assertEquals(0, rectangleAndSquare.areaOfRectangle(5, -5));
         }
 
         @Test
         public void toCalculateAreaWhenLengthIsNegativeAndBreadthIsPositive() {
-            assertEquals(0, rectangleAndSquare.AreaOfRectangle(-5, 5));
+            assertEquals(0, rectangleAndSquare.areaOfRectangle(-5, 5));
+        }
+    }
+
+    @Nested
+    public class PerimeterOfRectangle {
+        @Test
+        public void toCalculatePerimeterWhenLengthAndBreadthArePositive(){
+            assertEquals(20, rectangleAndSquare.perimeterOfRectangle(5, 5));
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenLengthAndBreadthAreNegative(){
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(-5, -5));
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenLengthIsPositiveAndBreadthIsNegative(){
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(5, -5));
+        }
+
+        @Test
+        public void toCalculatePerimeterWhenLengthIsNegativeAndBreadthIsPositive(){
+            assertEquals(0, rectangleAndSquare.perimeterOfRectangle(-5, 5));
         }
     }
 
