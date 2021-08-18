@@ -53,4 +53,13 @@ public class RectangleAndSquareTest {
         }
     }
 
+    @Nested
+    public class AreaOfSquare {
+        @Test
+        public void toCalculatedAreaOfSquareWhenSideIsPositive(){assertEquals(25, rectangleAndSquare.areaOfSquare(5));}
+
+        @Test
+        public void toCalculatedAreaOfSquareWhenSideIsNegative(){assertEquals(0, rectangleAndSquare.areaOfSquare(-5));}
+    }
+
 }
